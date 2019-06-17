@@ -9,6 +9,7 @@ docker build -t smokeping .
 ```
 
 ## Composer example
+```
 version: '3.7'
 services:
   smokeping:
@@ -27,3 +28,4 @@ services:
       - TITLE=My smokeping
       - STEP=300
       - PINGS=20
+```
