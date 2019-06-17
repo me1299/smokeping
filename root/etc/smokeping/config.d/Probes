@@ -1,0 +1,14 @@
+*** Probes ***
+
++FPing
+binary = /usr/bin/fping
+
++DNS
+binary = /usr/bin/dig
+
++Curl
+binary = /usr/bin/curl
+
++SSH
+binary = /usr/bin/ssh-keyscan
+pings  = 5

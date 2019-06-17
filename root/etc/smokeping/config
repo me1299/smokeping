@@ -1,0 +1,7 @@
+@include /data/config/General
+@include /data/config/Alerts
+@include /data/config/Database
+@include /data/config/Presentation
+@include /data/config/Probes
+@include /data/config/Slaves
+@include /data/config/Targets

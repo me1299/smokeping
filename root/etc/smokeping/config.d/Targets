@@ -1,0 +1,92 @@
+*** Targets ***
+
+probe = FPing
+menu = Top
+title = Network Latency Grapher
+
++ Ping
+menu  = Ping
+title = Ping
+
+++ Local
+menu = Local
+title = Local Network
+
++++ LocalMachine
+menu = Local Machine
+title = This host
+host = localhost
+
+++ Internet
+menu = Internet
+title = Internet
+
++++ Facebook
+menu = Facebook
+title = Facebook
+host = facebook.com
+
++++ Twitter
+menu = Twitter
+title = Twitter
+host = twitter.com
+
++++ Youtube
+menu = YouTube
+title = YouTube
+host = youtube.com
+
++++ Google
+menu = Google
+title = google.com
+host = google.com
+
++ DNS
+menu  = DNS check
+title = DNS check
+probe = DNS
+
+++ google
+menu  = Google
+title = DNS check using Google Public DNS
+
++++ example_org_dns_google
+menu   = example.com
+title  = DNS check example.com using first Google Public DNS server
+host   = example.com
+pings  = 5
+server = 8.8.8.8
+
++++ example_com_dns_google
+menu   = example.com
+title  = DNS check example.com using second Google Public DNS server
+host   = example.com
+pings  = 5
+server = 8.8.4.4
+
++ ssh
+menu  = SSH
+title = SSH check
+probe = SSH
+
+++ test_rebex_net_ssh
+menu    = test.rebex.net
+title   = SSH check - test.rebex.net
+host    = test.rebex.net
+keytype = rsa
+port    = 22
+
++ WWW
+menu  = WWW
+title = WWW check
+probe = Curl
+
+++ google_www_check
+menu              = google.com
+title             = WWW check - google.com 
+host              = google.com
+follow_redirects  = yes
+include_redirects = yes
+urlformat         = https://%host%/
+expect            = search
+pings             = 5
