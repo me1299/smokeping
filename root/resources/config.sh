@@ -9,6 +9,10 @@ if [ -n "${OWNER_EMAIL}" ]; then
   sed -i -e "/contact.*=/ s/= .*/= ${OWNER_EMAIL}/" /data/config/General
 fi
 
+if [ -n "${SMOKEPING_URL}" ]; then
+  sed -i -e "/cgiurl.*=/ s/= .*/= ${SMOKEPING_URL//\//\\/}\/smokeping\/smokeping.cgi/" /data/config/General
+fi
+
 #Targets
 if [ -n "${TITLE}" ]; then
   sed -i -e "0,/title.*=/{s/title = .*/title = ${TITLE}/}" /data/config/Targets
