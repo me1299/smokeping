@@ -23,6 +23,7 @@ services:
       - PUID=1000
       - PGID=997
       - TZ=Europe/Amsterdam
+      - SMOKEPING_URL=http://smokeping.domain.com
       - OWNER=Yourname
       - OWNER_EMAIL=user@domain.com
       - TITLE=My smokeping
