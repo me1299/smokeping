@@ -49,7 +49,7 @@ unison_tolerance = 2
 "Last Hour"    1h
 "Last 8 Hours" 8h
 "Last 2 Days"  2d
-"Last Month"   1m
+"Last 4 weeks" 4w
 "Last Year"    1y
 
 
