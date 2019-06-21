@@ -1,5 +1,9 @@
 FROM ubuntu:19.04
-MAINTAINER me1299 "g.tiele@gmail.com"
+
+ARG BUILD_DATE
+ARG VERSION
+LABEL build_version="Smokeping by ME1299 version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="ME1299 <g.tiele+docker@gmail.com>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 

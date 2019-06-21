@@ -29,4 +29,5 @@ services:
       - TITLE=My smokeping
       - STEP=300
       - PINGS=20
+    restart: unless-stopped      
 ```
