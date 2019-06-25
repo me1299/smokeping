@@ -3,17 +3,12 @@ Smokeping
 
 Smokeping with FPING, DNS, Curl & SSH probes
 
-## Build example
-```
-docker build -t smokeping .
-```
-
 ## Composer example
 ```
 version: '3.7'
 services:
   smokeping:
-    image: smokeping:latest
+    image: me1299/smokeping:latest
     container_name: smokeping
     volumes:
         - 'smokeping:/data'
