@@ -1,15 +1,13 @@
 FROM ubuntu:19.04
 
-ARG BUILD_DATE
-ARG VERSION
-LABEL build_version="Smokeping by ME1299 version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL build_version="Smokeping by ME1299 version 0.2"
 LABEL maintainer="ME1299 <g.tiele+docker@gmail.com>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN \
 apt-get update \
-&& apt-get install -y tzdata ssmtp fping apache2 curl openssh-client smokeping \
+&& apt-get install -y tzdata apache2 curl openssh-client smokeping \
 && rm -rf /var/lib/apt/lists/* \
 && mkdir /var/run/smokeping
 

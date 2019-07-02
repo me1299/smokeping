@@ -19,9 +19,12 @@ services:
       - PGID=997
       - TZ=Europe/Amsterdam
       - SMOKEPING_URL=http://smokeping.domain.com
+      - MAILHOST=smtpserver,smtpserver2
       - OWNER=Yourname
       - OWNER_EMAIL=user@domain.com
       - TITLE=My smokeping
+      - ALERTS_TO=user@domain.com
+      - ALERTS_FROM=user@domain.com      
       - STEP=300
       - PINGS=20
     restart: unless-stopped      
