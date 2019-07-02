@@ -8,7 +8,7 @@ Smokeping with FPING, DNS, Curl & SSH probes
 version: '3.7'
 services:
   smokeping:
-    image: me1299/smokeping:v0.1
+    image: me1299/smokeping:latest
     container_name: smokeping
     volumes:
         - 'smokeping:/data'
