@@ -1,4 +1,4 @@
-FROM ubuntu:19.04
+FROM ubuntu
 
 LABEL build_version="Smokeping by ME1299 version 0.2"
 LABEL maintainer="ME1299 <g.tiele+docker@gmail.com>"
@@ -10,6 +10,8 @@ apt-get update \
 && apt-get install -y tzdata apache2 curl openssh-client smokeping \
 && rm -rf /var/lib/apt/lists/* \
 && mkdir /var/run/smokeping
+
+RUN rm /etc/ssl/certs/ssl-cert-snakeoil.pem
 
 COPY root/ /
 VOLUME /data /data
